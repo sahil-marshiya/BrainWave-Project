@@ -1,0 +1,36 @@
+<form (ngSubmit)="saveContact()">
+  <label>First Name:</label>
+  <input type="text" [(ngModel)]="contact.first_name" name="first_name" required />
+
+  <label>Last Name:</label>
+  <input type="text" [(ngModel)]="contact.last_name" name="last_name" required />
+
+  <label>Email:</label>
+  <input type="email" [(ngModel)]="contact.emailId" name="emailId" required />
+
+  <label>Age:</label>
+  <input type="number" [(ngModel)]="contact.age" name="age" required />
+
+  <label>Gender:</label>
+  <select [(ngModel)]="contact.gender" name="gender" required>
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <label>Mobile Number:</label>
+  <input type="text" [(ngModel)]="contact.mobilenumber" name="mobilenumber" required />
+
+  <label>PAN Number:</label>
+  <input type="text" [(ngModel)]="contact.pan_no" name="pan_no" required />
+
+  <label>Aadhaar Number:</label>
+  <input type="text" [(ngModel)]="contact.adhaar_no" name="adhaar_no" required />
+
+  <label>Status:</label>
+  <input type="text" [(ngModel)]="contact.status" name="status" required />
+
+  <button type="submit">Save</button>
+  <button type="button" *ngIf="contactId" (click)="onDelete()">Delete</button>
+</form>

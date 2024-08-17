@@ -1,0 +1,237 @@
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-wrapper">
+      <div class="hero-columns">
+        <div class="hero-text-column">
+          <div class="hero-text-content">
+            <span class="hero-subtitle">Let's shift your business</span>
+            <h1 class="hero-title">Shift your business fast with Shade Pro.</h1>
+            <p class="hero-description">
+              With lots of unique blocks, you can easily build a page without coding. Build your next consultancy
+              website within few minutes.
+            </p>
+            <button class="cta-button">Get started a project</button>
+          </div>
+        </div>
+        <div class="hero-image-column">
+          <img loading="lazy" src="../../../assets/images/coverimage.svg" class="hero-image"
+            alt="Illustration representing business growth" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <header class="services-header">
+    <h2 class="services-title">Our services</h2>
+    <p class="services-description">We provide great services for our customers based on needs</p>
+  </header>
+  <div class="services-grid">
+    <article *ngFor="let service of services" class="service-card"
+      [ngClass]="{'content-writing': service.title === 'Content Writing'}">
+      <img *ngIf="service.bgImage" [src]="service.bgImage" [alt]="service.title + ' background'" class="service-bg">
+      <img [src]="service.icon" [alt]="service.title + ' icon'" class="service-icon">
+      <h3 class="service-title">{{service.title}}</h3>
+      <p class="service-description">{{service.description}}</p>
+      <div class="learn-more">
+        <span>Learn more</span>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b84df4501554e93706e5d40dcc718aa231cee8b51420b70a7768b3baebbffac8?placeholderIfAbsent=true&apiKey=85a1461002c24e81b70ed157e8060941"
+          alt="" class="arrow-icon">
+      </div>
+    </article>
+  </div>
+</section>
+<section class="testimonial">
+  <div class="testimonial-container">
+    <div class="testimonial-content">
+      <div class="avatar-column">
+        <img loading="lazy" src="../../../assets/images/Oval.svg" alt="Testimonial avatar" class="avatar-image" />
+      </div>
+      <div class="testimonial-text-column">
+        <div class="testimonial-text-wrapper">
+          <img loading="lazy" src="../../../assets/images/Stars.svg" alt="" class="quote-image" />
+          <blockquote class="testimonial-quote">
+            "OMG! I cannot believe that I have got a brand new landing page after getting Albino. It was super easy to
+            edit and publish."
+          </blockquote>
+          <p class="testimonial-author">Web Developer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about-section">
+  <div class="content-wrapper">
+    <div class="story-column">
+      <div class="story-content">
+        <h3 class="subtitle">Our Story</h3>
+        <blockquote class="title">We know how everything works and why your business is failing over and over again.
+        </blockquote>
+        <img src="../../../assets/images/i1.svg" alt="Illustration of our business story" class="story-image"
+          loading="lazy">
+      </div>
+      <p class="description">We share common trends and strategies for improving your rental income and making sure
+        you stay in high demand. With lots of unique blocks, you can easily build a page without coding. Build your
+        next landing page.</p>
+    </div>
+    <div class="image-column">
+      <div class="image-content">
+        <div class="image-grid">
+          <div class="main-image-wrapper">
+            <img src="../../../assets/images/i2.svg" alt="Main image representing our business" class="main-image"
+              loading="lazy">
+          </div>
+          <div class="secondary-image-wrapper">
+            <img src="../../../assets/images/i3.svg" alt="Secondary image showcasing our work" class="secondary-image"
+              loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="statistics-container">
+  <article *ngFor="let stat of statistics" class="statistic-item">
+    <h2 class="statistic-value">{{stat.value}}</h2>
+    <p class="statistic-description">{{stat.description}}</p>
+  </article>
+</section>
+
+<section class="features">
+  <div class="features-background">
+    <header class="features-header">
+      <img src="../../../assets/images/dot.svg" alt="" class="header-icon" />
+      <div class="header-content">
+        <h2 class="header-subtitle">Why choose us</h2>
+        <h1 class="header-title">People choose us because we serve the best for everyone</h1>
+      </div>
+    </header>
+    <div class="feature-grid">
+      <article *ngFor="let feature of features" class="feature-item">
+        <img [src]="feature.icon" [alt]="feature.title + ' icon'" class="feature-icon" />
+        <div class="feature-content">
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </div>
+      </article>
+    </div>
+    <footer class="features-footer">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/78393d0c31a5754264dbf522def72aae1ac338be3b123ae38d87033f6190f8ef?placeholderIfAbsent=true&apiKey=85a1461002c24e81b70ed157e8060941"
+        alt="" class="footer-image" />
+      <div class="footer-content">
+        <div class="footer-text">
+          <h2 class="footer-title">Ready to launch your next project?</h2>
+          <p class="footer-description">With lots of unique blocks, you can easily build a page without coding. Build
+            your next landing page.</p>
+        </div>
+        <button class="cta-button">Get started a project</button>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<section class="case-studies-section">
+  <h2 class="section-subtitle">Case studies</h2>
+  <h1 class="section-title">Our works describe why we are the best in the business</h1>
+
+  <div class="case-studies-grid">
+    <article *ngFor="let study of caseStudies" class="case-study-item">
+      <img [src]="study.image" [alt]="study.title" class="case-study-image">
+      <div class="case-study-info">
+        <p class="case-study-category">{{ study.category }}</p>
+        <h3 class="case-study-title">{{ study.title }}</h3>
+      </div>
+    </article>
+  </div>
+
+  <div class="cta-container">
+    <a href="#" class="cta-link">See all works
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/20a7665053427c9b273a722d2d1b2d5959123522442c5755f5f8f91326c77e85?placeholderIfAbsent=true&apiKey=85a1461002c24e81b70ed157e8060941"
+        alt="" class="cta-icon">
+    </a>
+  </div>
+</section>
+
+
+<section id="testimonial">
+  <div class="container">
+    <div class="testimonial_content">
+      <span class="section_name">TESTIMONIAL</span>
+      <h2>“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced
+        users.”</h2>
+      <div class="user_info">
+        <img src="../../../assets/images/Oval (1).svg" alt="User">
+        <span class="user_name">Ian Klein</span>
+        <span class="user_title">Digital Marketer</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="bg">
+    <div class="div">
+      <div class="div-2">
+        <div class="div-3">
+          <div class="ready-to-launch-your">Ready to launch your next project?</div>
+          <div class="with-lots-of-unique">With lots of unique blocks, you can easily build a page without coding. Build
+            your next landing page.</div>
+        </div>
+        <button class="rectangle">Get started a project</button>
+      </div>
+      <img loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f86b518780c396ee84d6f00d88c1e1fd3b830a26b9e01812805bd8eb7711766?placeholderIfAbsent=true&apiKey=85a1461002c24e81b70ed157e8060941"
+        class="img" alt="Decorative image" />
+      <div class="div-4">
+        <div class="div-5">
+          <div class="shadepro">Brainwave.io</div>
+          <div class="with-lots-of-unique-2">With lots of unique blocks, you can easily build a page without coding.
+            Build your next landing page.</div>
+          <img loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6537dd8b958fc17cb312d9efcf2b7254cc2655975093b3dd2b7790124afc2c8c?placeholderIfAbsent=true&apiKey=85a1461002c24e81b70ed157e8060941"
+            class="img-2" alt="Social media icons" />
+        </div>
+        <div class="div-6">
+          <div class="company">Company</div>
+          <div class="about-us-contact-us">
+            About us <br />
+            Contact us <br />
+            Careers <br />
+            Press
+          </div>
+        </div>
+        <div class="div-7">
+          <div class="product">Product</div>
+          <div class="features-pricing-new">
+            Features <br />
+            Pricing <br />
+            News <br />
+            Help desk <br />
+            Support
+          </div>
+        </div>
+        <div class="div-8">
+          <div class="services">Services</div>
+          <div class="digital-marketing-co">
+            Digital Marketing <br />
+            Content Writing <br />
+            SEO for Business <br />
+            UI Design
+          </div>
+        </div>
+        <div class="div-9">
+          <div class="legal">Legal</div>
+          <div class="privacy-policy-terms">
+            Privacy Policy <br />
+            Terms & Conditions <br />
+            Return Policy
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

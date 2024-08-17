@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px; /* Adjust the padding to give more space */
+  font-weight: 700;
+  position: relative;
+  background: transparent;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.header__logo {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  letter-spacing: -0.13px;
+  color: black;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav-link {
+  font-family: "Gilroy", sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: -0.1px;
+  color: black;
+  text-decoration: none;
+}
+
+.header__cta {
+  font-family: "Gilroy", sans-serif;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  background-color: #473bf0;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 27px;
+  cursor: pointer;
+}
